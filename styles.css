@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 246, 221);
+    animation: twinkling 1s infinite alternate, moving 20s infinite alternate; /* 修改移动时长 */
+}
+
+@keyframes twinkling {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes moving {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(50vw - 50%), calc(50vh - 50%)); /* 在视口中随机移动 */
+    }
+}
